@@ -42,6 +42,8 @@ PLAGUING_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    # https://django-extensions.readthedocs.io/en/latest/installation_instructions.html
+    'django_extensions',
 ]
 
 DJANGO_APPS = [
