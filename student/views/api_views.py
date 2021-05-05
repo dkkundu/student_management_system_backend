@@ -1,10 +1,10 @@
 from rest_framework import generics  # views, viewset
-# from rest_framework.authentication import (
-#     TokenAuthentication,
-#     BasicAuthentication,
-# )
+from rest_framework.authentication import (
+    TokenAuthentication,
+    # BasicAuthentication,
+)
 # from rest_framework.response import Response
-# from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated
 
 from student.models import (
     Student,
@@ -17,6 +17,8 @@ from student.serializers import (
 
 
 class StudentCreateAPIView(generics.ListCreateAPIView):
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = (IsAuthenticated,)
     serializer_class = StudentSerializers
     queryset = Student.objects.all()
 

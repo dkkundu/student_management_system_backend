@@ -26,7 +26,7 @@ class Student(models.Model):
         _("Age"), null=False, blank=False
     )
     programming_languages = models.ManyToManyField(
-        ProgrammingLanguages
+        ProgrammingLanguages, blank=True
 
     )
 
