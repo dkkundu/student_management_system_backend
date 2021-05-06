@@ -13,8 +13,6 @@ class ProgramminglanguagesSerializers(serializers.ModelSerializer):
 
 
 class StudentSerializers(serializers.ModelSerializer):
-    programming_languages = ProgramminglanguagesSerializers(many=True)
-
     class Meta:
         model = Student
         fields = [

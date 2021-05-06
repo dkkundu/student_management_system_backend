@@ -25,8 +25,9 @@ class Student(models.Model):
     age = models.PositiveIntegerField(
         _("Age"), null=False, blank=False
     )
-    programming_languages = models.ManyToManyField(
-        ProgrammingLanguages, blank=True
+    programming_languages = models.CharField(
+        _("Programming Languages"), max_length=50,
+        null=True
 
     )
 
